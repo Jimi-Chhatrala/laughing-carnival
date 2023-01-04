@@ -1,0 +1,78 @@
+  <!-- =========================================== Portfolio Display Data ================================================ -->
+
+            <div id="boxData"></div>
+            <script>
+              let data = '<div class="work-container container work-grid">';
+              for (let j = 0; j < rowsData.length; j++) {
+                let rowsDataImage = rowsData[j].image;
+                let rowsDataTitle = rowsData[j].title;
+                let rowsDataDescription = rowsData[j].description;
+                let rowsDataDemoLink = rowsData[j].demolink;
+
+                data += '<div class="work-card">';
+                data +=
+                  '<img src="./assets/img/' +
+                  `${rowsDataImage}` +
+                  '.png" alt="' +
+                  `${rowsDataTitle}` +
+                  '" class="work-img" />';
+                data +=
+                  '<h3 class="work-title">' + `${rowsDataTitle}` + "</h3>";
+
+                data += '<span class="work-button services__button"';
+
+                data += ">View More";
+                data += '<i class="uil uil-arrow-right work-button-icon"></i>';
+                data += "</span>";
+
+                data += '<div class="services__modal">';
+                data += '<div class="services-modal-content">';
+                data += '<i class="uil uil-times services__modal-close"></i>';
+                data +=
+                  '<img src="./assets/img/' +
+                  `${rowsDataImage}` +
+                  '.png" alt="" class="work-modal-img" />';
+                data +=
+                  '<h3 class="services-modal-title">' +
+                  `${rowsDataTitle}` +
+                  "</h3>";
+                data +=
+                  '<p class="services-modal-description">' +
+                  `${rowsDataDescription}` +
+                  "</p>";
+                data += '<div class="project-techs">';
+
+                // const techstackArray = rowsData["techstack"];
+                // const techStackArrayDisplay = techstackArray.map((tsa, index) => (
+                //    tsa = tsa.toLowerCase();
+                //   <img
+                //     src='./assets/img/' + `${}` + '.svg'
+                //     alt=""
+                //     class="project-tech img-thumbnail"
+                //   />
+                // ));
+
+                // data += `${techStackArrayDisplay}`;
+                data +=
+                  '<img src="./assets/img/html5.svg" alt="" class="project-tech img-thumbnail" />';
+                data += "</div>";
+                data +=
+                  '<a href="' +
+                  `${rowsDataDemoLink}` +
+                  '" target="_blank" class="work-button">Demo';
+                data += '<i class="uil uil-arrow-right work-button-icon"></i>';
+                data += "</a>";
+                // data += "</div>";
+              }
+              // data += "</div>";
+              // data += "</div>";
+              // data += "</div>";
+              document.getElementById("boxData").innerHTML = data;
+            </script>
+
+           
+          </div>
+        </div>
+      </section>
+
+      <!--==================== PROJECT IN MIND ====================-->

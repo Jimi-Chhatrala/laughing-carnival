@@ -1,0 +1,32 @@
+https://unpkg.com/swiper@6.5.8/swiper-bundle.min.css
+
+https://github.com/nolimits4web/Swiper/blob/master/demos/145-css-mode.html
+
+https://github.com/bedimcode/responsive-website-restaurant/blob/main/assets/js/main.js
+
+******************************************************************************************************
+
+how to display limited words in javascript in blog
+
+https://futurestud.io/tutorials/limit-and-truncate-a-string-to-a-given-length-in-javascript-and-node-js
+
+/**
+ * Returns the first `limit` characters from the given `string`.
+ *
+ * @param {String} string
+ * @param {Number} limit
+ *
+ * @returns {String}
+ */
+function limit (string = '', limit = 0) {  
+  return string.substring(0, limit)
+}
+
+const greeting = limit('Hello Marcus', 6)  
+// 'Hello '
+
+const greeting = limit('Hello Marcus', 100)  
+// 'Hello Marcus'
+
+******************************************************************************************************
+
