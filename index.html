@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!--==================== FAVICON ====================-->
+
+    <link rel="icon" href="./assets/img/favicon.ico" />
+
     <!--==================== UNICONS ====================-->
     <link
       rel="stylesheet"
@@ -19,7 +23,7 @@
     <!-- Portfolio Data JSON file -->
     <script src="./assets/js/data.js"></script>
 
-    <title>Responsive Portfolio Website</title>
+    <title>Jimi Chhatrala - IT Enthusiast | jimi-chhatrala.github.io</title>
   </head>
   <body>
     <!--==================== HEADER ====================-->
@@ -91,7 +95,8 @@
               </a>
             </div>
             <div class="home__img">
-              <svg
+              <!-- <div class="home__blob"></div> -->
+              <!-- <svg
                 class="home__blob"
                 viewBox="0 0 200 187"
                 xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +124,7 @@
                     xlink:href="assets/img/perfil.png"
                   />
                 </g>
-              </svg>
+              </svg> -->
             </div>
 
             <div class="home__data">
@@ -745,7 +750,7 @@
                 data += '<p class="services-modal-description">';
                 data += `${
                   rowsDataDescription.length > 378
-                    ? `${rowsDataDescription.substring(0, 378) + "..."}`
+                    ? `${rowsDataDescription.substring(0, 350) + "..."}`
                     : `${rowsDataDescription.substring(0, 378)}`
                 }`;
                 // console.log(rowsDataDescription.length);
@@ -760,7 +765,7 @@
                 for (let k = 0; k < techstackArray.length; k++) {
                   data +=
                     '<img src="./assets/img/' +
-                    `${techstackArray[k]}` +
+                    `${techstackArray[k].toLowerCase()}` +
                     '.svg" alt="" class="project-tech img-thumbnail" />';
                 }
 
