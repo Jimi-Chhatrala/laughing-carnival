@@ -376,7 +376,7 @@ img {
 
 .home__scroll-button {
   color: var(--first-color);
-  transition: 0.3s2;
+  transition: 0.3s;
 }
 
 .home__scroll-button:hover {
@@ -751,7 +751,8 @@ img {
   position: relative;
   background-color: var(--container-color);
   padding: 1.5rem;
-  border-radius: 0.5rem;
+  border-radius: 1.5rem;
+  /* border-radius: 0.5rem; */
 }
 
 .services__modal-services {
@@ -766,6 +767,11 @@ img {
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
   margin-bottom: var(--mb-1-5);
+}
+
+.services__modal-title,
+.services-modal-description {
+  text-align: justify;
 }
 
 .services__modal-close {
@@ -1143,6 +1149,11 @@ img {
 
 /* For medium devices */
 
+@media screen and (max-width: 568px) {
+  .home__data {
+    padding-left: 3rem;
+  }
+}
 @media screen and (min-width: 568px) {
   .home__content {
     grid-template-columns: max-content 1fr 1fr;
@@ -1294,6 +1305,12 @@ img {
 
   .services__modal-content {
     width: 450px;
+  }
+
+  .services-modal-description {
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-1);
+    padding: 0;
   }
 
   .portfolio__img {
@@ -1748,6 +1765,53 @@ a {
     margin-right: var(--mb-1);
   }
 }
+
+.wave {
+  animation: say-hi 2s infinite;
+  display: inline-block;
+  -webkit-transform-origin: 70% 70%;
+  transform-origin: 70% 70%;
+}
+
+@keyframes say-hi {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  10% {
+    -webkit-transform: rotate(14deg);
+    transform: rotate(14deg);
+  }
+  20% {
+    -webkit-transform: rotate(-8deg);
+    transform: rotate(-8deg);
+  }
+  30% {
+    -webkit-transform: rotate(14deg);
+    transform: rotate(14deg);
+  }
+  40% {
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+  60% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+}
+
+.view-more-button {
+  padding: 0rem;
+}
+
 /* ********************************************************************* */
 /* ********************************************************************* */
 /* ********************************************************************* */
