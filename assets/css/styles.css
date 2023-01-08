@@ -165,6 +165,32 @@ img {
   margin-bottom: var(--mb-3);
 }
 
+.title-line {
+  position: relative;
+}
+
+.title-line::before {
+  content: "";
+  position: absolute;
+  bottom: 45%;
+  width: 30px;
+  height: 2px;
+  background: var(--first-color);
+  transform: translateX(-115%);
+  border-radius: 15px;
+}
+
+.title-line::after {
+  content: "";
+  position: absolute;
+  bottom: 45%;
+  width: 30px;
+  height: 2px;
+  background: var(--first-color);
+  transform: translateX(15%);
+  border-radius: 15px;
+}
+
 .section__title,
 .section__subtitle {
   text-align: center;
