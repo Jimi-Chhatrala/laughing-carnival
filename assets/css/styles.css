@@ -988,6 +988,14 @@ img {
   margin-bottom: var(--mb-2);
 }
 
+.contact__information a {
+  transition: transform 0.5s;
+}
+
+.contact__information a:hover {
+  transform: translateY(-5px);
+}
+
 .contact__icon {
   font-size: 2rem;
   color: var(--first-color);
@@ -1070,10 +1078,10 @@ img {
 }
 
 .footer__copy {
-  font-size: var(--smaller-font-size);
+  font-size: var(--small-font-size);
   text-align: center;
-  color: var(--text-color-light);
   margin-top: var(--mb-3);
+  color: #fff;
 }
 
 .footer__title,

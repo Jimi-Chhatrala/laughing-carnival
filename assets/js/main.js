@@ -304,3 +304,19 @@ $(document).ready(function () {
 //   $curr.filter(":hidden").slice(0, 3).slideDown("slow");
 // });
 // });
+
+/**
+ * *************** PORTFOLIO VIEWS COUNTER *********************************
+ */
+
+// window.addEventListener("load", function () {
+//   const countElement = document.getElementById("count");
+//   async function countVisits() {
+//     await fetch("https://api.countapi.xyz/update/qwerty/ytrewq/?amount=1")
+//       .then((res) => res.json())
+//       .then((res) => {
+//         countElement.innerHTML = res.value + "+";
+//       });
+//   }
+//   countVisits();
+// });
