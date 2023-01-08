@@ -90,6 +90,14 @@ body.dark-theme {
   align-items: center;
 }
 
+.uil-moon {
+  color: darkblue !important;
+}
+
+.uil-sun {
+  color: orange !important;
+}
+
 .change-theme {
   font-size: 1.25rem;
   color: var(--title-color);
@@ -384,14 +392,30 @@ img {
 }
 
 .home__scroll-mouse {
-  font-size: 2rem;
+  /* font-size: 2rem; */
+  display: flex;
 }
 
 .home__scroll-name {
-  font-size: var(--small-font-size);
+  /* font-size: var(--small-font-size); */
   color: var(--title-color);
-  font-weight: var(--font-medium);
+  /* font-weight: var(--font-medium); */
   margin-right: var(--mb-0-25);
+  margin-left: var(--mb-0-25);
+}
+
+.wheel {
+  animation: scroll 2s ease infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+
+  30% {
+    transform: translateY(3.75rem);
+  }
 }
 
 .home__scroll-arrow {
