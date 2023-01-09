@@ -91,8 +91,8 @@ const rowsData = [
     title: "Portfolio",
     category: "Website",
     description:
-      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum numquam vel doloribus expedita adipisci dolorem incidunt doloremque excepturi eius iusto! Soluta unde odit consequatur autem.",
-    techstack: ["HTML5", "CSS3", "JAVASCRIPT"],
+      "This is a place to showcase about me, my skills, and my work portfolio.",
+    techstack: ["HTML5", "CSS3", "JAVASCRIPT", "JQUERY"],
     demolink: "https://jimi-chhatrala.github.io/",
   },
   {
@@ -105,6 +105,17 @@ const rowsData = [
     techstack: ["HTML5", "CSS3"],
     demolink:
       "https://jimi-chhatrala.github.io/javascript-projects/Input Border Label Animation",
+  },
+  {
+    id: 11,
+    image: "cat-photo-app",
+    title: "Cat Photo App",
+    category: "Website",
+    description:
+      "A simple website which shows information about the cats, their likes and dislikes, and several images and links to images. [Small Project Of freecodecamp.org]",
+    techstack: ["HTML5"],
+    demolink:
+      "https://jimi-chhatrala.github.io/Free-Code-Camp-Works/(New) Responsive Web Design/Learn HTML by Building a Cat Photo App",
   },
 ];
 
