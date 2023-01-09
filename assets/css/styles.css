@@ -574,7 +574,25 @@ img {
 
 .skills__list {
   row-gap: 1.5rem;
-  padding-left: 2.7rem;
+  /* padding-left: 2.7rem; */
+}
+
+.skills__set {
+  display: flex;
+  /* align-items: stretch; */
+  /* justify-content: space-between; */
+}
+
+.skills__data {
+  width: 100%;
+}
+
+.skills__image {
+  margin: 0 3.5%;
+  /* margin-right: var(--mb-1-5); */
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
 }
 
 .skills__arrow {
