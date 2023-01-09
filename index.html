@@ -143,7 +143,10 @@
               <h1 class="home__title">
                 Hi, I'm Jimi
                 <span class="wave"
-                  ><img src="./assets/img/hello-hand.png" class="hello-hand" alt=""
+                  ><img
+                    src="./assets/img/hello-hand.png"
+                    class="hello-hand"
+                    alt=""
                 /></span>
               </h1>
               <h3 class="home__subtitle">IT Enthusiast</h3>
@@ -759,7 +762,8 @@
               // 'Hello '
               data =
                 '<div class="work-container portfolio-container container work-grid card-product-box">';
-              for (let j = 0; j < rowsData.length; j++) {
+              // for (let j = 0; j < rowsData.length; j++) {
+              for (let j = rowsData.length - 1; j >= 0; j--) {
                 let rowsDataImage = rowsData[j].image;
                 let rowsDataTitle = rowsData[j].title;
                 let rowsDataDescription = rowsData[j].description;
@@ -1036,7 +1040,80 @@
             </div>
           </div>
           <form action="#" class="contact__form grid">
-            <div class="contact__inputs grid">
+            <div class="contact-form-div">
+              <input
+                type="text"
+                id="name"
+                autocomplete="off"
+                placeholder="Tell me your name"
+                required
+                class="contact-form-input"
+                name="name"
+              />
+              <label for="name" class="contact-form-tag">Name</label>
+            </div>
+            <div class="contact-form-div">
+              <input
+                type="email"
+                id="email"
+                autocomplete="off"
+                placeholder="Tell me your email"
+                required
+                class="contact-form-input"
+                name="email"
+              />
+              <label for="email" class="contact-form-tag">Email</label>
+            </div>
+            <div class="contact-form-div contact-form-area">
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                class="contact-form-input"
+                placeholder="Tell me your requirements..."
+                spellcheck="false"
+              ></textarea>
+              <label for="message" class="contact-form-tag">Message</label>
+            </div>
+            <!-- <div class="contact-form-div">
+              <input
+                type="text"
+                name="name"
+                class="contact-form-input"
+                placeholder="Tell me your name"
+                required
+              />
+              <label for="name" class="contact-form-tag">Name</label>
+            </div> -->
+            <!-- <div class="contact-form-div">
+              <label for="email" class="contact-form-tag">Email</label>
+              <input
+                type="email"
+                name="email"
+                class="contact-form-input"
+                placeholder="Tell me your email"
+              />
+            </div> -->
+            <!-- <div class="contact-form-div contact-form-area">
+              <label for="description" class="contact-form-tag">
+                Message
+              </label>
+              <textarea
+                name="description"
+                id="description"
+                cols="30"
+                rows="10"
+                class="contact-form-input"
+                placeholder="Tell me your requirements..."
+              ></textarea>
+            </div> -->
+
+            <!-- Contact Form Original Start -->
+
+            <!-- Contact Form Original End -->
+
+            <!-- <div class="contact__inputs grid">
               <div class="contact__content">
                 <label for="" class="contact__label">Name</label>
                 <input type="text" class="contact__input" />
@@ -1045,12 +1122,12 @@
                 <label for="" class="contact__label">Email</label>
                 <input type="email" class="contact__input" />
               </div>
-            </div>
-            <div class="contact__content">
+            </div> -->
+            <!-- <div class="contact__content">
               <label for="" class="contact__label">Project</label>
               <input type="text" class="contact__input" />
-            </div>
-            <div class="contact__content">
+            </div> -->
+            <!-- <div class="contact__content">
               <label for="" class="contact__label">Message</label>
               <textarea
                 name=""
@@ -1059,7 +1136,7 @@
                 rows="7"
                 class="contact__input"
               ></textarea>
-            </div>
+            </div> -->
             <div>
               <a href="#" class="button button--flex">
                 Send Message

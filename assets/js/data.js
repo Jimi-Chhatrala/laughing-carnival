@@ -95,6 +95,17 @@ const rowsData = [
     techstack: ["HTML5", "CSS3", "JAVASCRIPT"],
     demolink: "https://jimi-chhatrala.github.io/",
   },
+  {
+    id: 10,
+    image: "input-border-label-animation",
+    title: "Input Border Label Animation",
+    category: "UI-Design",
+    description:
+      "Input Field with a beautiful animation where label becomes the part of the border when user clicks on the input field. Not only this, if user types in some text, then it remains retained if click on another input field or another area.",
+    techstack: ["HTML5", "CSS3"],
+    demolink:
+      "https://jimi-chhatrala.github.io/javascript-projects/Input Border Label Animation",
+  },
 ];
 
 const rowsNav = [
