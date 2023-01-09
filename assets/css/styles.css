@@ -1155,6 +1155,15 @@ img {
 
 /* =================================================================== */
 
+.message-drop-div {
+  display: flex;
+}
+
+.pointing-down-hand {
+  width: 7%;
+  transform: translateY(10px);
+}
+
 /* --------------------------------------------------------------- */
 
 .contact-form-div {
