@@ -112,10 +112,21 @@ const rowsData = [
     title: "Cat Photo App",
     category: "Website",
     description:
-      "A simple website which shows information about the cats, their likes and dislikes, and several images and links to images. [Small Project Of freecodecamp.org]",
+      "A simple website which shows information about the cats, their likes and dislikes, and several images and links to images. [Small Project of freecodecamp.org]",
     techstack: ["HTML5"],
     demolink:
       "https://jimi-chhatrala.github.io/Free-Code-Camp-Works/(New) Responsive Web Design/Learn HTML by Building a Cat Photo App",
+  },
+  {
+    id: 12,
+    image: "cafe-menu",
+    title: "Cafe Menu",
+    category: "Website",
+    description:
+      "A simple design which shows a menu page for a cafe webpage. It shows coffee flavors and deserts information. [Small Project of freecodecamp.org]",
+    techstack: ["HTML5", "CSS3"],
+    demolink:
+      "https://jimi-chhatrala.github.io/Free-Code-Camp-Works/(New) Responsive Web Design/Learn Basic CSS by Building a Cafe Menu",
   },
 ];
 
