@@ -325,39 +325,41 @@ $(document).ready(function () {
  * *************** TOTAL EXPERIENCE CALCULATOR
  */
 
-function totalExperience() {
-  var d1 = 01;
-  var m1 = 01;
-  var y1 = 2023;
+document.addEventListener("DOMContentLoaded", function () {
+  function totalExperience() {
+    var d1 = 01;
+    var m1 = 01;
+    var y1 = 2023;
 
-  var date = new Date();
-  var d2 = date.getDate();
-  var m2 = 1 + date.getMonth();
-  var y2 = date.getFullYear();
-  var month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+    var date = new Date();
+    var d2 = date.getDate();
+    var m2 = 1 + date.getMonth();
+    var y2 = date.getFullYear();
+    var month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-  if (d1 > d2) {
-    d2 = d2 + month[m2 - 1];
-    m2 = m2 - 1;
+    if (d1 > d2) {
+      d2 = d2 + month[m2 - 1];
+      m2 = m2 - 1;
+    }
+
+    if (m1 > m2) {
+      m2 = m2 + 12;
+      y2 = y2 - 1;
+    }
+
+    var m = m2 - m1;
+    var y = y2 - y1;
+
+    document.getElementById("totalWorkExperience").innerHTML = `${y}.${m}+`;
   }
 
-  if (m1 > m2) {
-    m2 = m2 + 12;
-    y2 = y2 - 1;
-  }
+  totalExperience();
 
-  var m = m2 - m1;
-  var y = y2 - y1;
+  /**
+   * ********************** TOTAL PROJECTS COMPLETED ************************
+   */
 
-  document.getElementById("totalWorkExperience").innerHTML = `${y}.${m}+`;
-}
-
-totalExperience();
-
-/**
- * ********************** TOTAL PROJECTS COMPLETED ************************
- */
-
-document.getElementById(
-  "totalProjectsCompleted"
-).innerHTML = `${rowsData.length}+`;
+  document.getElementById(
+    "totalProjectsCompleted"
+  ).innerHTML = `${rowsData.length}+`;
+});
