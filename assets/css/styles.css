@@ -624,9 +624,11 @@ img {
 .skills__percentage {
   display: block;
   background-color: var(--first-color);
+  transition: width 2s linear;
 }
 
 .skills__html {
+  /* transition: width 1s linear; */
   width: 90%;
 }
 
