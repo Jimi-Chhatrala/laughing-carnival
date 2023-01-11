@@ -371,15 +371,54 @@ $(document).ready(function () {
  */
 
 // let section = document.querySelector(".skills");
+
+/**
+ * *********** SKILLS SECTION PROGRESS BAR WIDTH INCREASE ANIMATION
+ */
+
 let section = document.querySelector(".uil-download-alt");
 
 let spans = document.querySelectorAll(".progress span");
 
+let nums = document.querySelectorAll(".nums .num");
+
+let started = false; // Function Started ? No
+
+function startCount(el) {
+  let goal = el.dataset.goal;
+  let count = setInterval(() => {
+    el.textContent++;
+    if (el.textContent == goal) {
+      clearInterval(count);
+    }
+  }, 2000 / goal);
+}
+
 window.onscroll = function () {
+  // ********************************* PROGRESS BAR ***************************
+
   if (window.scrollY >= section.offsetTop) {
-    console.log("Reached Section Three");
     spans.forEach((span) => {
       span.style.width = span.dataset.width;
     });
+
+    // ********************************* PROGRESS PERCENTAGE ***************************
+
+    if (!started) {
+      nums.forEach((num) => startCount(num));
+    }
+    started = true;
   }
 };
+
+/**
+ * ******************** SKILLS SECTION PROGRESS PERCENTAGE NUMBER INCREASE
+ */
+
+// let section = document.querySelector(".three");
+
+// window.onscroll = function () {
+//   if (window.scrollY >= section.offsetTop) {
+
+//   }
+// };

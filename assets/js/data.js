@@ -1,3 +1,26 @@
+const rowsNav = [
+  {
+    name: "All",
+    category: "All",
+  },
+  {
+    name: "Website",
+    category: "Website",
+  },
+  {
+    name: "Web-App",
+    category: "Web App",
+  },
+  {
+    name: "Game",
+    category: "Game",
+  },
+  {
+    name: "UI-Design",
+    category: "UI Design",
+  },
+];
+
 const rowsData = [
   {
     id: 1,
@@ -130,25 +153,86 @@ const rowsData = [
   },
 ];
 
-const rowsNav = [
+const frontendData = [
   {
-    name: "All",
-    category: "All",
+    id: 1,
+    image: "html5",
+    title: "HTML",
+    percentage: "35",
   },
   {
-    name: "Website",
-    category: "Website",
+    id: 2,
+    image: "css3",
+    title: "CSS",
+    percentage: "20",
   },
   {
-    name: "Web-App",
-    category: "Web App",
+    id: 3,
+    image: "javascript",
+    title: "JavaScript",
+    percentage: "15",
   },
   {
-    name: "Game",
-    category: "Game",
+    id: 3,
+    image: "jquery",
+    title: "jQuery",
+    percentage: "15",
   },
   {
-    name: "UI-Design",
-    category: "UI Design",
+    id: 5,
+    image: "react",
+    title: "Reat",
+    percentage: "10",
+  },
+];
+
+const backendData = [
+  {
+    id: 1,
+    image: "expressjs",
+    title: "Express Js",
+    percentage: "35",
+  },
+  {
+    id: 2,
+    image: "nodejs",
+    title: "Node Js",
+    percentage: "20",
+  },
+  {
+    id: 3,
+    image: "firebase",
+    title: "Firebase",
+    percentage: "15",
+  },
+  {
+    id: 4,
+    image: "php",
+    title: "PHP",
+    percentage: "10",
+  },
+  {
+    id: 5,
+    image: "mysql",
+    title: "MySQL",
+    percentage: "10",
+  },
+];
+
+const designData = [
+  {
+    id: 1,
+    image: "figma",
+    title: "Figma",
+    percentage: "5",
+  },
+];
+
+const toolsData = [
+  {
+    id: 1,
+    image: "git",
+    title: "git",
+    percentage: "5",
   },
 ];

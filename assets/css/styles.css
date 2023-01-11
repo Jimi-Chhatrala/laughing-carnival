@@ -611,6 +611,10 @@ img {
   font-weight: var(--font-medium);
 }
 
+.skills__number::after {
+  content: "%";
+}
+
 .skills__bar,
 .skills__percentage {
   height: 5px;

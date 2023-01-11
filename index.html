@@ -280,34 +280,71 @@
                 <i class="uil uil-angle-down skills__arrow"></i>
               </div>
 
-              <div class="skills__list grid">
-                <div class="skills__set">
-                  <div class="skills__image">
-                    <img src="./assets/img/html5.svg" alt="" />
-                  </div>
-                  <div class="skills__data">
-                    <div class="skills__titles">
-                      <h3 class="skills__name">HTML</h3>
-                      <span class="skills__number">90%</span>
-                    </div>
-                    <div class="skills__bar progress">
-                      <span
-                        class="skills__percentage skills__html"
-                        style="width: 0"
-                        data-width="80%"
-                      ></span>
-                    </div>
-                  </div>
-                </div>
+              <div class="skills__list grid" id="frontendList">
+                <!-- <span id="frontendList"></span> -->
+                <script>
+                  // console.log(frontendData.length)
+                  let frontend = "";
+                  for (let f = 0; f < frontendData.length; f++) {
+                    let frontendImage = frontendData[f].image.toLowerCase();
 
-                <div class="skills__set">
+                    let frontendTitle = frontendData[f].title;
+
+                    let frontendPercentage = frontendData[f].percentage;
+
+                    frontend += '<div class="skills__set">';
+
+                    frontend += '<div class="skills__image">';
+
+                    frontend +=
+                      '<img src="./assets/img/' +
+                      `${frontendImage}.svg` +
+                      '" alt="' +
+                      `${frontendTitle}` +
+                      '" />';
+
+                    frontend += "</div>";
+
+                    frontend += '<div class="skills__data">';
+
+                    frontend += '<div class="skills__titles nums">';
+
+                    frontend +=
+                      '<h3 class="skills__name">' +
+                      `${frontendTitle}` +
+                      "</h3>";
+
+                    frontend +=
+                      '<span class="skills__number num" data-goal="' +
+                      `${frontendPercentage}` +
+                      '">0</span>';
+
+                    frontend += "</div>";
+
+                    frontend += '<div class="skills__bar progress">';
+
+                    frontend +=
+                      '<span class="skills__percentage skills__html" style="width: 0" data-width="' +
+                      `${frontendPercentage}` +
+                      '%"></span>';
+
+                    frontend += "</div>";
+
+                    frontend += "</div>";
+
+                    frontend += "</div>";
+                  }
+                  document.getElementById("frontendList").innerHTML = frontend;
+                </script>
+
+                <!-- <div class="skills__set">
                   <div class="skills__image">
                     <img src="./assets/img/css3.svg" alt="" />
                   </div>
                   <div class="skills__data">
-                    <div class="skills__titles">
+                    <div class="skills__titles nums">
                       <h3 class="skills__name">CSS</h3>
-                      <span class="skills__number">80%</span>
+                      <span class="skills__number num" data-goal="80">0</span>
                     </div>
                     <div class="skills__bar progress">
                       <span
@@ -317,16 +354,16 @@
                       ></span>
                     </div>
                   </div>
-                </div>
+                </div> -->
 
-                <div class="skills__set">
+                <!-- <div class="skills__set">
                   <div class="skills__image">
                     <img src="./assets/img/javascript.svg" alt="" />
                   </div>
                   <div class="skills__data">
-                    <div class="skills__titles">
+                    <div class="skills__titles nums">
                       <h3 class="skills__name">JavaScript</h3>
-                      <span class="skills__number">60%</span>
+                      <span class="skills__number num" data-goal="80">0</span>
                     </div>
                     <div class="skills__bar progress">
                       <span
@@ -336,16 +373,16 @@
                       ></span>
                     </div>
                   </div>
-                </div>
+                </div> -->
 
-                <div class="skills__set">
+                <!-- <div class="skills__set">
                   <div class="skills__image">
                     <img src="./assets/img/react.svg" alt="" />
                   </div>
                   <div class="skills__data">
-                    <div class="skills__titles">
+                    <div class="skills__titles nums">
                       <h3 class="skills__name">React</h3>
-                      <span class="skills__number">85%</span>
+                      <span class="skills__number num" data-goal="80">0</span>
                     </div>
                     <div class="skills__bar progress">
                       <span
@@ -355,7 +392,7 @@
                       ></span>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
 
@@ -371,15 +408,127 @@
                 <i class="uil uil-angle-down skills__arrow"></i>
               </div>
 
-              <div class="skills__list grid">
+              <div class="skills__list grid" id="backendList">
+                <!-- <span id="backendList"></span> -->
+                <script>
+                  // console.log(backendData.length)
+                  let backend = "";
+                  for (let f = 0; f < backendData.length; f++) {
+                    let backendImage = backendData[f].image.toLowerCase();
+
+                    let backendTitle = backendData[f].title;
+
+                    let backendPercentage = backendData[f].percentage;
+
+                    backend += '<div class="skills__set">';
+
+                    backend += '<div class="skills__image">';
+
+                    backend +=
+                      '<img src="./assets/img/' +
+                      `${backendImage}.svg` +
+                      '" alt="' +
+                      `${backendTitle}` +
+                      '" />';
+
+                    backend += "</div>";
+
+                    backend += '<div class="skills__data">';
+
+                    backend += '<div class="skills__titles nums">';
+
+                    backend +=
+                      '<h3 class="skills__name">' + `${backendTitle}` + "</h3>";
+
+                    backend +=
+                      '<span class="skills__number num" data-goal="' +
+                      `${backendPercentage}` +
+                      '">0</span>';
+
+                    backend += "</div>";
+
+                    backend += '<div class="skills__bar progress">';
+
+                    backend +=
+                      '<span class="skills__percentage skills__html" style="width: 0" data-width="' +
+                      `${backendPercentage}` +
+                      '%"></span>';
+
+                    backend += "</div>";
+
+                    backend += "</div>";
+
+                    backend += "</div>";
+                  }
+                  document.getElementById("backendList").innerHTML = backend;
+                </script>
+
+                <!-- <div class="skills__set">
+                  <div class="skills__image">
+                    <img src="./assets/img/css3.svg" alt="" />
+                  </div>
+                  <div class="skills__data">
+                    <div class="skills__titles nums">
+                      <h3 class="skills__name">CSS</h3>
+                      <span class="skills__number num" data-goal="80">0</span>
+                    </div>
+                    <div class="skills__bar progress">
+                      <span
+                        class="skills__percentage skills__css"
+                        style="width: 0"
+                        data-width="70%"
+                      ></span>
+                    </div>
+                  </div>
+                </div> -->
+
+                <!-- <div class="skills__set">
+                  <div class="skills__image">
+                    <img src="./assets/img/javascript.svg" alt="" />
+                  </div>
+                  <div class="skills__data">
+                    <div class="skills__titles nums">
+                      <h3 class="skills__name">JavaScript</h3>
+                      <span class="skills__number num" data-goal="80">0</span>
+                    </div>
+                    <div class="skills__bar progress">
+                      <span
+                        class="skills__percentage skills__js"
+                        style="width: 0"
+                        data-width="50%"
+                      ></span>
+                    </div>
+                  </div>
+                </div> -->
+
+                <!-- <div class="skills__set">
+                  <div class="skills__image">
+                    <img src="./assets/img/react.svg" alt="" />
+                  </div>
+                  <div class="skills__data">
+                    <div class="skills__titles nums">
+                      <h3 class="skills__name">React</h3>
+                      <span class="skills__number num" data-goal="80">0</span>
+                    </div>
+                    <div class="skills__bar progress">
+                      <span
+                        class="skills__percentage skills__react"
+                        style="width: 0"
+                        data-width="60%"
+                      ></span>
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+              <!-- <div class="skills__list grid">
                 <div class="skills__set">
                   <div class="skills__image">
                     <img src="./assets/img/expressjs.svg" alt="" />
                   </div>
                   <div class="skills__data">
-                    <div class="skills__titles">
+                    <div class="skills__titles nums">
                       <h3 class="skills__name">Express Js</h3>
-                      <span class="skills__number">80%</span>
+                      <span class="skills__number num" data-goal="80">0</span>
                     </div>
                     <div class="skills__bar progress">
                       <span
@@ -396,9 +545,9 @@
                     <img src="./assets/img/nodejs.svg" alt="" />
                   </div>
                   <div class="skills__data">
-                    <div class="skills__titles">
+                    <div class="skills__titles nums">
                       <h3 class="skills__name">Node Js</h3>
-                      <span class="skills__number">70%</span>
+                      <span class="skills__number num" data-goal="80">0</span>
                     </div>
                     <div class="skills__bar progress">
                       <span
@@ -415,9 +564,9 @@
                     <img src="./assets/img/firebase.svg" alt="" />
                   </div>
                   <div class="skills__data">
-                    <div class="skills__titles">
+                    <div class="skills__titles nums">
                       <h3 class="skills__name">Firebase</h3>
-                      <span class="skills__number">90%</span>
+                      <span class="skills__number num" data-goal="80">0</span>
                     </div>
                     <div class="skills__bar progress">
                       <span
@@ -434,9 +583,9 @@
                     <img src="./assets/img/python.svg" alt="" />
                   </div>
                   <div class="skills__data">
-                    <div class="skills__titles">
+                    <div class="skills__titles nums">
                       <h3 class="skills__name">Python</h3>
-                      <span class="skills__number">55%</span>
+                      <span class="skills__number num" data-goal="80">0</span>
                     </div>
                     <div class="skills__bar progress">
                       <span
@@ -447,7 +596,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
 
@@ -464,15 +613,127 @@
                 <i class="uil uil-angle-down skills__arrow"></i>
               </div>
 
-              <div class="skills__list grid">
+              <div class="skills__list grid" id="designList">
+                <!-- <span id="designList"></span> -->
+                <script>
+                  // console.log(designData.length)
+                  let design = "";
+                  for (let f = 0; f < designData.length; f++) {
+                    let designImage = designData[f].image.toLowerCase();
+
+                    let designTitle = designData[f].title;
+
+                    let designPercentage = designData[f].percentage;
+
+                    design += '<div class="skills__set">';
+
+                    design += '<div class="skills__image">';
+
+                    design +=
+                      '<img src="./assets/img/' +
+                      `${designImage}.svg` +
+                      '" alt="' +
+                      `${designTitle}` +
+                      '" />';
+
+                    design += "</div>";
+
+                    design += '<div class="skills__data">';
+
+                    design += '<div class="skills__titles nums">';
+
+                    design +=
+                      '<h3 class="skills__name">' + `${designTitle}` + "</h3>";
+
+                    design +=
+                      '<span class="skills__number num" data-goal="' +
+                      `${designPercentage}` +
+                      '">0</span>';
+
+                    design += "</div>";
+
+                    design += '<div class="skills__bar progress">';
+
+                    design +=
+                      '<span class="skills__percentage skills__html" style="width: 0" data-width="' +
+                      `${designPercentage}` +
+                      '%"></span>';
+
+                    design += "</div>";
+
+                    design += "</div>";
+
+                    design += "</div>";
+                  }
+                  document.getElementById("designList").innerHTML = design;
+                </script>
+
+                <!-- <div class="skills__set">
+                  <div class="skills__image">
+                    <img src="./assets/img/css3.svg" alt="" />
+                  </div>
+                  <div class="skills__data">
+                    <div class="skills__titles nums">
+                      <h3 class="skills__name">CSS</h3>
+                      <span class="skills__number num" data-goal="80">0</span>
+                    </div>
+                    <div class="skills__bar progress">
+                      <span
+                        class="skills__percentage skills__css"
+                        style="width: 0"
+                        data-width="70%"
+                      ></span>
+                    </div>
+                  </div>
+                </div> -->
+
+                <!-- <div class="skills__set">
+                  <div class="skills__image">
+                    <img src="./assets/img/javascript.svg" alt="" />
+                  </div>
+                  <div class="skills__data">
+                    <div class="skills__titles nums">
+                      <h3 class="skills__name">JavaScript</h3>
+                      <span class="skills__number num" data-goal="80">0</span>
+                    </div>
+                    <div class="skills__bar progress">
+                      <span
+                        class="skills__percentage skills__js"
+                        style="width: 0"
+                        data-width="50%"
+                      ></span>
+                    </div>
+                  </div>
+                </div> -->
+
+                <!-- <div class="skills__set">
+                  <div class="skills__image">
+                    <img src="./assets/img/react.svg" alt="" />
+                  </div>
+                  <div class="skills__data">
+                    <div class="skills__titles nums">
+                      <h3 class="skills__name">React</h3>
+                      <span class="skills__number num" data-goal="80">0</span>
+                    </div>
+                    <div class="skills__bar progress">
+                      <span
+                        class="skills__percentage skills__react"
+                        style="width: 0"
+                        data-width="60%"
+                      ></span>
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+              <!-- <div class="skills__list grid">
                 <div class="skills__set">
                   <div class="skills__image">
                     <img src="./assets/img/figma.svg" alt="" />
                   </div>
                   <div class="skills__data">
-                    <div class="skills__titles">
+                    <div class="skills__titles nums">
                       <h3 class="skills__name">Figma</h3>
-                      <span class="skills__number">90%</span>
+                      <span class="skills__number num" data-goal="80">0</span>
                     </div>
                     <div class="skills__bar progress">
                       <span
@@ -484,7 +745,7 @@
                   </div>
                 </div>
 
-                <!-- <div class="skills__data">
+                <div class="skills__data">
                   <div class="skills__titles">
                     <h3 class="skills__name">Sketch</h3>
                     <span class="skills__number">85%</span>
@@ -492,9 +753,9 @@
                   <div class="skills__bar">
                     <span class="skills__percentage skills__sketch"></span>
                   </div>
-                </div> -->
+                </div>
 
-                <!-- <div class="skills__data">
+                <div class="skills__data">
                   <div class="skills__titles">
                     <h3 class="skills__name">Photoshop</h3>
                     <span class="skills__number">85%</span>
@@ -502,8 +763,173 @@
                   <div class="skills__bar">
                     <span class="skills__percentage skills__photoshop"></span>
                   </div>
+                </div>
+              </div> -->
+            </div>
+            <!--==================== SKILL 3 ====================-->
+            <div class="skills__content skills__close">
+              <div class="skills__header">
+                <i class="uil uil-sync skills__icon"></i>
+                <div>
+                  <h1 class="skills__title">Tools</h1>
+                  <span class="skills__subtitle">More than 5 years</span>
+                </div>
+
+                <i class="uil uil-angle-down skills__arrow"></i>
+              </div>
+
+              <div class="skills__list grid" id="toolsList">
+                <!-- <span id="toolsList"></span> -->
+                <script>
+                  // console.log(toolsData.length)
+                  let tools = "";
+                  for (let f = 0; f < toolsData.length; f++) {
+                    let toolsImage = toolsData[f].image.toLowerCase();
+
+                    let toolsTitle = toolsData[f].title;
+
+                    let toolsPercentage = toolsData[f].percentage;
+
+                    tools += '<div class="skills__set">';
+
+                    tools += '<div class="skills__image">';
+
+                    tools +=
+                      '<img src="./assets/img/' +
+                      `${toolsImage}.svg` +
+                      '" alt="' +
+                      `${toolsTitle}` +
+                      '" />';
+
+                    tools += "</div>";
+
+                    tools += '<div class="skills__data">';
+
+                    tools += '<div class="skills__titles nums">';
+
+                    tools +=
+                      '<h3 class="skills__name">' + `${toolsTitle}` + "</h3>";
+
+                    tools +=
+                      '<span class="skills__number num" data-goal="' +
+                      `${toolsPercentage}` +
+                      '">0</span>';
+
+                    tools += "</div>";
+
+                    tools += '<div class="skills__bar progress">';
+
+                    tools +=
+                      '<span class="skills__percentage skills__html" style="width: 0" data-width="' +
+                      `${toolsPercentage}` +
+                      '%"></span>';
+
+                    tools += "</div>";
+
+                    tools += "</div>";
+
+                    tools += "</div>";
+                  }
+                  document.getElementById("toolsList").innerHTML = tools;
+                </script>
+
+                <!-- <div class="skills__set">
+                  <div class="skills__image">
+                    <img src="./assets/img/css3.svg" alt="" />
+                  </div>
+                  <div class="skills__data">
+                    <div class="skills__titles nums">
+                      <h3 class="skills__name">CSS</h3>
+                      <span class="skills__number num" data-goal="80">0</span>
+                    </div>
+                    <div class="skills__bar progress">
+                      <span
+                        class="skills__percentage skills__css"
+                        style="width: 0"
+                        data-width="70%"
+                      ></span>
+                    </div>
+                  </div>
+                </div> -->
+
+                <!-- <div class="skills__set">
+                  <div class="skills__image">
+                    <img src="./assets/img/javascript.svg" alt="" />
+                  </div>
+                  <div class="skills__data">
+                    <div class="skills__titles nums">
+                      <h3 class="skills__name">JavaScript</h3>
+                      <span class="skills__number num" data-goal="80">0</span>
+                    </div>
+                    <div class="skills__bar progress">
+                      <span
+                        class="skills__percentage skills__js"
+                        style="width: 0"
+                        data-width="50%"
+                      ></span>
+                    </div>
+                  </div>
+                </div> -->
+
+                <!-- <div class="skills__set">
+                  <div class="skills__image">
+                    <img src="./assets/img/react.svg" alt="" />
+                  </div>
+                  <div class="skills__data">
+                    <div class="skills__titles nums">
+                      <h3 class="skills__name">React</h3>
+                      <span class="skills__number num" data-goal="80">0</span>
+                    </div>
+                    <div class="skills__bar progress">
+                      <span
+                        class="skills__percentage skills__react"
+                        style="width: 0"
+                        data-width="60%"
+                      ></span>
+                    </div>
+                  </div>
                 </div> -->
               </div>
+              <!-- <div class="skills__list grid">
+                <div class="skills__set">
+                  <div class="skills__image">
+                    <img src="./assets/img/figma.svg" alt="" />
+                  </div>
+                  <div class="skills__data">
+                    <div class="skills__titles nums">
+                      <h3 class="skills__name">Figma</h3>
+                      <span class="skills__number num" data-goal="80">0</span>
+                    </div>
+                    <div class="skills__bar progress">
+                      <span
+                        class="skills__percentage skills__figma"
+                        style="width: 0"
+                        data-width="30%"
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">Sketch</h3>
+                    <span class="skills__number">85%</span>
+                  </div>
+                  <div class="skills__bar">
+                    <span class="skills__percentage skills__sketch"></span>
+                  </div>
+                </div>
+
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">Photoshop</h3>
+                    <span class="skills__number">85%</span>
+                  </div>
+                  <div class="skills__bar">
+                    <span class="skills__percentage skills__photoshop"></span>
+                  </div>
+                </div>
+              </div> -->
             </div>
           </div>
         </div>
