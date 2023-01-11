@@ -349,7 +349,15 @@ function totalExperience() {
   var m = m2 - m1;
   var y = y2 - y1;
 
-  document.getElementById("totalExperience").innerHTML = `${y}.${m}+`;
+  document.getElementById("totalWorkExperience").innerHTML = `${y}.${m}+`;
 }
 
 totalExperience();
+
+/**
+ * ********************** TOTAL PROJECTS COMPLETED ************************
+ */
+
+document.getElementById(
+  "totalProjectsCompleted"
+).innerHTML = `${rowsData.length}+`;
