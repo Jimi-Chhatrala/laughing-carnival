@@ -1317,8 +1317,16 @@ img {
   padding: 2rem 0 3rem;
 }
 
+.footer-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .footer__title {
-  font-size: var(--h1-font-size);
+  font-size: var(--h2-font-size);
+  /* font-size: var(--h1-font-size); */
   margin-bottom: var(--mb-0-25);
 }
 
@@ -1677,7 +1685,7 @@ img {
   }
 
   .footer__links {
-    flex-direction: row;
+    /* flex-direction: row; */
     column-gap: 2rem;
   }
 
