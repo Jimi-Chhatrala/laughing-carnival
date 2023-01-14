@@ -1342,6 +1342,7 @@ img {
 
 .footer__link:hover {
   color: var(--first-color-lighter);
+  text-decoration: underline;
 }
 
 .footer__social {
@@ -1828,6 +1829,7 @@ img {
 .work-img {
   width: 295px;
   height: 170px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 img {
@@ -1906,6 +1908,7 @@ h3 {
   height: 259px;
   border-radius: 1rem;
   margin-bottom: var(--mb-1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .services-modal-title {
