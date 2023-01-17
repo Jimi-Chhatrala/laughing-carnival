@@ -1252,6 +1252,10 @@ img {
   height: 11rem;
 }
 
+.textarea-no-expand {
+  resize: none;
+}
+
 /* .contact-form-input:hover {
   border: 1.2px solid #000;
 } */
