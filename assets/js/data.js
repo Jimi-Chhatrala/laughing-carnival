@@ -21,6 +21,9 @@ const rowsNav = [
   },
 ];
 
+const DEMO_LINK = "https://jimi-chhatrala.github.io/";
+const SOURCE_CODE_LINK = "https://github.com/jimi-chhatrala/";
+
 const rowsData = [
   {
     id: 1,
@@ -148,8 +151,8 @@ const rowsData = [
     description:
       "A simple design which shows a menu page for a cafe webpage. It shows coffee flavors and deserts information. [Small Project of freecodecamp.org]",
     techstack: ["HTML5", "CSS3"],
-    demolink:
-      "https://jimi-chhatrala.github.io/Free-Code-Camp-Works/(New) Responsive Web Design/Learn Basic CSS by Building a Cafe Menu",
+    demolink: `${DEMO_LINK}Free-Code-Camp-Works/(New) Responsive Web Design/Learn Basic CSS by Building a Cafe Menu`,
+    sourcecodelink: `${SOURCE_CODE_LINK}Free-Code-Camp-Works/tree/main/(New) Responsive Web Design/Learn Basic CSS by Building a Cafe Menu`,
   },
 ];
 

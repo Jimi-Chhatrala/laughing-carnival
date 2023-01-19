@@ -1299,6 +1299,7 @@
                 let rowsDataTitle = rowsData[j].title;
                 let rowsDataDescription = rowsData[j].description;
                 let rowsDataDemoLink = rowsData[j].demolink;
+                let rowsDataSourceCodeLink = rowsData[j].sourcecodelink;
                 let rowsDataCategory = rowsData[j].category;
 
                 data +=
@@ -1319,7 +1320,8 @@
                 }`;
                 // `${rowsDataTitle}`
                 data += "</h3>";
-                data += '<span class="work-button services__button">';
+                data +=
+                  '<span class="work-button services__button project-links-button">';
                 data += "View More";
                 data += '<i class="uil uil-arrow-right work-button-icon"></i>';
                 data += "</span>";
@@ -1386,14 +1388,28 @@
 
                 data += "</div>";
 
+                data += "<div class='project-show-links'>";
+                data += "<div>";
                 data +=
                   '<a href="' +
                   `${rowsDataDemoLink}` +
-                  '" target="_blank" class="work-button">';
+                  '" target="_blank" class="work-button project-links-button">';
                 data += "Demo";
                 data += '<i class="uil uil-arrow-right work-button-icon"></i>';
                 data += "</a>";
                 data += "</div>";
+                data += "<div>";
+                data +=
+                  '<a href="' +
+                  `${rowsDataSourceCodeLink}` +
+                  '" target="_blank" class="work-button project-links-button">';
+                data += "Source Code";
+                // data += '<i class="uil uil-arrow-right work-button-icon"></i>';
+                data += "</a>";
+                data += "</div>";
+                data += "</div>";
+                data += "</div>";
+
                 data += "</div>";
                 data += "</div>";
               }
@@ -1860,7 +1876,6 @@
                 placeholder="Tell me your requirements..."
                 required
                 spellcheck="false"
-                
               ></textarea>
               <label for="message" class="contact-form-tag">Message</label>
             </div>
