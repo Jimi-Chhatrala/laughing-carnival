@@ -1253,6 +1253,18 @@
 
         <div class="containerold">
           <div>
+            <div class="search">
+              <div class="icon"></div>
+              <div class="input">
+                <input type="text" placeholder="Search" id="mysearch" />
+              </div>
+              <span
+                class="clear"
+                onclick="document.getElementById('mysearch').value = ''"
+              ></span>
+              <div id="match-list">match-list</div>
+            </div>
+
             <!-- <div class="work-filters">
               <span class="active-work work-item" id="all">All</span>
               <span class="work-item" id="web">Web</span>

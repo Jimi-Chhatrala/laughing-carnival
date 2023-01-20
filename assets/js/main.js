@@ -422,3 +422,64 @@ window.onscroll = function () {
 
 //   }
 // };
+
+/**
+ * ********* PORTFOLIO SEARCH BAR FUNCTIONALITY
+ */
+
+// DESIGN CODE
+
+const icon = document.querySelector(".icon");
+const search = document.querySelector(".search");
+
+icon.onclick = function () {
+  search.classList.toggle("active");
+  document.getElementById("mysearch").focus();
+};
+
+document.addEventListener("click", function (event) {
+  if (event.target.closest(".search")) {
+    return;
+  } else {
+    search.classList.remove("active");
+  }
+});
+
+// CODE FUNCTIONALITY
+
+const mysearch = document.getElementById("mysearch");
+
+const matchList = document.getElementById("match-list");
+
+const searchProjects = (searchText) => {
+  let matches = rowsData.filter((project) => {
+    const regex = new RegExp(`^${searchText}`, "gi");
+
+    return project.title.match(regex);
+  });
+
+  if (searchText.length === 0) {
+    matches = [];
+    matchList.innerHTML = "";
+  }
+
+  outputHtml(matches);
+};
+
+const outputHtml = (matches) => {
+  if (matches.length > 0) {
+    let html = "<ul>";
+
+    html += matches
+      .map(
+        (match) => `<li>
+        <div class="searched-project-data">${match.title}</div></li>`
+      )
+      .join("");
+    html += "</ul>";
+
+    matchList.innerHTML = html;
+  }
+};
+
+mysearch.addEventListener("input", () => searchProjects(mysearch.value));
