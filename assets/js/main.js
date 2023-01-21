@@ -442,6 +442,9 @@ document.addEventListener("click", function (event) {
     return;
   } else {
     search.classList.remove("active");
+    matchList.innerHTML = "";
+    document.getElementById("mysearch").value = "";
+    document.querySelector(".search").classList.remove("overflow");
   }
 });
 
@@ -450,6 +453,12 @@ document.addEventListener("click", function (event) {
 const mysearch = document.getElementById("mysearch");
 
 const matchList = document.getElementById("match-list");
+
+const clearBtn = document.querySelector(".clear");
+
+clearBtn.addEventListener("click", function () {
+  matchList.innerHTML = "";
+});
 
 const searchProjects = (searchText) => {
   let matches = rowsData.filter((project) => {
@@ -461,19 +470,25 @@ const searchProjects = (searchText) => {
   if (searchText.length === 0) {
     matches = [];
     matchList.innerHTML = "";
-  }
+  } else {
+    // document.querySelector(".search.active").style = "overflow: visible;";
+    document.querySelector(".search").classList.add("overflow");
 
-  outputHtml(matches);
+    outputHtml(matches);
+  }
 };
 
 const outputHtml = (matches) => {
   if (matches.length > 0) {
-    let html = "<ul>";
+    let html = "<ul class='match-list'>";
 
     html += matches
       .map(
         (match) => `<li>
-        <div class="searched-project-data">${match.title}</div></li>`
+        <div class="card-list">
+        <div class="matches-card">${match.title}</div><i class="uil uil-eye view-project-modal-btn "></i>
+        </div>
+        </li>`
       )
       .join("");
     html += "</ul>";
