@@ -1511,6 +1511,27 @@ image {
   fill: #39424e;
 }
 
+.star-row {
+  position: relative;
+}
+
+#starz {
+  position: absolute;
+  /* transform: translate(-80px 20px); */
+  width: 150px;
+  height: 9px;
+  /* background: #fff; */
+  transform: translateX(-19px) translateY(-40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-star {
+  margin: 0 1px;
+  width: 8px;
+  height: 8px;
+}
 /* BADGE DESIGN */
 
 /* HACKERRANK BADGE */

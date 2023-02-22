@@ -478,22 +478,111 @@ const searchProjects = (searchText) => {
   }
 };
 
-const outputHtml = (matches) => {
-  if (matches.length > 0) {
-    let html = "<ul class='match-list'>";
+const outputHtml = (rowsData) => {
+  if (rowsData.length > 0) {
+    data =
+      '<div class="work-container portfolio-container container work-grid card-product-box">';
+    // for (let j = 0; j < rowsData.length; j++) {
+    for (let j = rowsData.length - 1; j >= 0; j--) {
+      let rowsDataImage = rowsData[j].image;
+      let rowsDataTitle = rowsData[j].title;
+      let rowsDataDescription = rowsData[j].description;
+      let rowsDataDemoLink = rowsData[j].demolink;
+      let rowsDataSourceCodeLink = rowsData[j].sourcecodelink;
+      let rowsDataCategory = rowsData[j].category;
 
-    html += matches
-      .map(
-        (match) => `<li>
-        <div class="card-list">
-        <div class="matches-card">${match.title}</div><i class="uil uil-eye view-project-modal-btn "></i>
-        </div>
-        </li>`
-      )
-      .join("");
-    html += "</ul>";
+      // data += "<ul class='match-list'>";
+      // data += '<li>';
+      // data += '<div class="card-list">';
+      // data += '<div class="matches-card">${match.title}</div><span class="view-project-modal-btn"><i class="uil uil-eye"></i></span>';
+      // data += '</div>';
+      // data += '</li>';
+      // data += "</ul>";
 
-    matchList.innerHTML = html;
+      data += '<div class="work-card card all ' + `${rowsDataCategory}` + '">';
+      data +=
+        '<img src="./assets/img/' +
+        `${rowsDataImage}` +
+        '.png" alt="' +
+        `${rowsDataTitle}` +
+        '" class="work-img" />';
+      data += '<h3 class="work-title">';
+      data += `${
+        rowsDataTitle.length > 30
+          ? `${rowsDataTitle.substring(0, 34) + "..."}`
+          : `${rowsDataTitle.substring(0, 50)}`
+      }`;
+      // `${rowsDataTitle}`
+      data += "</h3>";
+      data +=
+        '<span class="work-button services__button project-links-button">';
+      data += "View More";
+      data += '<i class="uil uil-arrow-right work-button-icon"></i>';
+      data += "</span>";
+      data += '<div class="services__modal">';
+      data += '<div class="services-modal-content">';
+      data += '<i class="uil uil-times services__modal-close"></i>';
+      data +=
+        '<img src="./assets/img/' +
+        `${rowsDataImage}` +
+        '.png" alt="" class="work-modal-img" />';
+      data +=
+        '<h3 class="services-modal-title">' +
+        `${rowsDataTitle.substring(0, 50)}` +
+        "</h3>";
+
+      data += '<p class="services-modal-description">';
+      data += `${
+        rowsDataDescription.length > 378
+          ? `${rowsDataDescription.substring(0, 350) + "..."}`
+          : `${rowsDataDescription.substring(0, 378)}`
+      }`;
+
+      data += "</p>";
+
+      data += '<div class="project-techs">';
+
+      const techstackArray = rowsData[j]["techstack"];
+
+      for (let k = 0; k < techstackArray.length; k++) {
+        data +=
+          '<img src="./assets/img/' +
+          `${techstackArray[k].toLowerCase()}` +
+          '.svg" alt="" class="project-tech img-thumbnail" />';
+      }
+
+      data += "</div>";
+
+      data += "<div class='project-show-links'>";
+      data += "<div>";
+      data +=
+        '<a href="' +
+        `${rowsDataDemoLink}` +
+        '" target="_blank" class="work-button project-links-button">';
+      data += "Demo";
+      data += '<i class="uil uil-arrow-right work-button-icon"></i>';
+      data += "</a>";
+      data += "</div>";
+      data += "<div>";
+      data +=
+        '<a href="' +
+        `${rowsDataSourceCodeLink}` +
+        '" target="_blank" class="work-button project-links-button">';
+      data += "Source Code";
+      data += '<i class="uil uil-github work-button-icon"></i>';
+      data += "</a>";
+      data += "</div>";
+      data += "</div>";
+      data += "</div>";
+
+      data += "</div>";
+      data += "</div>";
+    }
+
+    data += "</div>";
+    // document.getElementById("boxData").innerHTML = data;
+
+    matchList.innerHTML = data;
   }
 };
 
