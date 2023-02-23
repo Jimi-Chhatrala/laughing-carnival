@@ -284,3 +284,7 @@ const toolsData = [
     percentage: "5",
   },
 ];
+
+const pythonStarCount = 1,
+  cLanguageStarCount = 2,
+  sqlStarCount = 3;

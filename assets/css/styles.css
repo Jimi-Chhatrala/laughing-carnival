@@ -1515,13 +1515,13 @@ image {
   position: relative;
 }
 
-#starz {
+.starz {
   position: absolute;
   /* transform: translate(-80px 20px); */
-  width: 150px;
+  width: 100px;
   height: 9px;
   /* background: #fff; */
-  transform: translateX(-19px) translateY(-40px);
+  transform: translateX(6px) translateY(-40px);
   display: flex;
   align-items: center;
   justify-content: center;
