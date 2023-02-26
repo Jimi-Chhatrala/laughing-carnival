@@ -13,7 +13,7 @@ const random = Math.floor(Math.random() * colors.length);
  */
 
 function totalExperience() {
-  var d1 = 01;
+  var d1 = 23;
   var m1 = 01;
   var y1 = 2023;
 

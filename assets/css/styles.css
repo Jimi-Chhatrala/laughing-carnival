@@ -1347,7 +1347,7 @@ img {
 }
 
 .footer__link:hover {
-  color: var(--first-color-lighter);
+  /* color: var(--first-color-lighter); */
   text-decoration: underline;
 }
 
