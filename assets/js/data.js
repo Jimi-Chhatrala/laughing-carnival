@@ -286,5 +286,6 @@ const toolsData = [
 ];
 
 const pythonStarCount = 1,
-  cLanguageStarCount = 2,
-  sqlStarCount = 3;
+  cplusplusLanguageStarCount = 2,
+  sqlStarCount = 3,
+  problemSolvingStarCount = 4;
